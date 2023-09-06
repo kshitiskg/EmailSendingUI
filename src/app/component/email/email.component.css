@@ -1,0 +1,12 @@
+.example-full-width {
+    width: 100%;
+    background-color: white;
+  }
+
+  .card{
+    width: 60%;
+
+  }
+  .spinner{
+    font-size: 10px;
+  }

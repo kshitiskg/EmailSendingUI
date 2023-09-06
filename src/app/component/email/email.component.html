@@ -1,0 +1,49 @@
+<div class="container">
+    <div>
+        <div class="card p-4 mt-2 m-auto bg-white shadow border-0">
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <h2>Compose Email</h2>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>From</mat-label>
+                        <input name="from" value="kshitijagaikwad1998@gmail.com" disabled  matInput >
+                    </mat-form-field>
+                </div>
+                <div class="col-12">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>To</mat-label>
+                        <input name="to" [(ngModel)]="emailData.to" matInput >
+                    </mat-form-field>
+                </div>
+                <div class="col-12">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Subject</mat-label>
+                        <input [(ngModel)]="emailData.subject" matInput >
+                    </mat-form-field>
+                </div>
+                <div class="col-12">
+                    
+                      <mat-form-field class="example-full-width" >
+                        <mat-label>Enter a Message</mat-label>
+                        <textarea [(ngModel)]="emailData.message" rows="5" matInput placeholder="Compose Mail"></textarea>
+                      </mat-form-field>
+                </div>
+                <div class="col-12">
+                    <div class="text-center">
+                        <button class="mx-2" mat-raised-button color="primary" (click)="sendEmail()">
+                            <div *ngIf="spinner" class="spinner-border spinner-border-sm text-white me-2" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>Send</button>
+                        <button mat-raised-button color="secondary" (click)="clear()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
